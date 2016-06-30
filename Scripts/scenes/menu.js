@@ -23,13 +23,18 @@ var scenes;
             this._helloLabel.x = config.Screen.CENTER_X;
             this._helloLabel.y = CScreen.CENTER_Y;
             this.addChild(this._helloLabel);
+            this._startButton = new objects.Button("StartButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 60);
+            this.addChild(this._startButton);
+            // startbutton event listener
+            this._startButton.on('click', this._startButtonClick, this);
             stage.addChild(this);
         };
         // Menu Scene updates here
         Menu.prototype.update = function () {
-            // 3 values for all game objects: rotation, location, and scale
-            // rotation increment by 5 degrees
-            this._helloLabel.rotation += 5;
+        };
+        // EVENT HANDLERS ++++++++++++++++++++++++++++++++++++++++
+        Menu.prototype._startButtonClick = function (event) {
+            this._helloLabel.text = "Game Started";
         };
         return Menu;
     }(objects.Scene));
