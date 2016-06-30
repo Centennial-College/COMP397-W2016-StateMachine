@@ -25,6 +25,8 @@ function main() {
     // registration x value set to half of the width of the label
     helloLabel.regX = helloLabel.getMeasuredWidth() * 0.5;
     helloLabel.regY = helloLabel.getMeasuredHeight() * 0.5;
+    helloLabel.x = 320;
+    helloLabel.y = 480;
 
     stage.addChild(helloLabel);
 }
