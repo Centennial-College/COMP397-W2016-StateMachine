@@ -11,6 +11,8 @@ function init() {
     main();
 }
 function gameLoop(event) {
+    helloLabel.rotation += 5; // 3 values for all game objects: rotation, location, and scale
+    // rotation increment by 5 degrees
     stage.update(); // re-render/redraw every element on my stage
 }
 function main() {
@@ -20,7 +22,7 @@ function main() {
     helloLabel.regX = helloLabel.getMeasuredWidth() * 0.5;
     helloLabel.regY = helloLabel.getMeasuredHeight() * 0.5;
     helloLabel.x = 320;
-    helloLabel.y = 480;
+    helloLabel.y = 240;
     stage.addChild(helloLabel);
 }
 /*
