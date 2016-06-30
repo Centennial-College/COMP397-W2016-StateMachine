@@ -15,6 +15,9 @@ function init(): void {
     // create our main display list container
     stage = new createjs.Stage(canvas);
 
+    // Enable Mouse Events
+    stage.enableMouseOver(20);
+
     // set the framerate to 60 frames per second
     createjs.Ticker.framerate = config.Game.FPS;
 
